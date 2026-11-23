@@ -264,6 +264,7 @@ img {
 
 .hero-image {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius);
@@ -397,6 +398,7 @@ img {
 .feature-media img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius);
@@ -406,7 +408,7 @@ img {
 
 .playbook-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 28px;
 }
 
@@ -428,6 +430,7 @@ img {
 .card img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
@@ -477,6 +480,7 @@ img {
 .cta-band img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 21 / 8;
   object-fit: cover;
 }
@@ -789,10 +793,6 @@ img {
     padding: 64px 0;
   }
 
-  .playbook-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
   .feature-row {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -832,5 +832,11 @@ img {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 347px) {
+  .playbook-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
